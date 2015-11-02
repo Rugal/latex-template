@@ -1,0 +1,66 @@
+\documentclass[12pt]{article}
+\usepackage{hyperref,fullpage,times,url, array, multirow, lipsum}
+\usepackage{amssymb,amsmath,mathptmx,mathrsfs, booktabs}
+\usepackage{graphicx, epstopdf, listings, ulem, float}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[square,numbers,super]{natbib}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage[final]{pdfpages}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue,
+	filecolor=magenta,      
+	urlcolor=cyan,
+	bookmarks=true,
+}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\DeclareGraphicsExtensions{.eps}
+\title{ Course\\ name \\ assignment}
+\author
+{
+	Yunheng Yao(104166626)\\
+	\href{mailto:test@uwindsor.ca}{test@uwindsor.ca}
+}
+\date{\today}
+\bibliographystyle{plainnat}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\section*{Task 1}
+\hyperref[figure:1]{Appendix}.
+\section*{Task 2}
+\newpage
+\appendix
+\section{Task 1}
+\begin{figure}[H]
+\label{figure:1}
+\includegraphics[scale=0.67]{editDistance.png}
+\end{figure}
+\section{This}
+\begin{figure}[H]
+\label{diagram:1}
+\includepdf[pages={1}]{class.pdf}
+\end{figure}
+\begin{table}[H]
+	\centering
+	\label{table:1}
+	\begin{tabular}{|c|c|c|c|c|}
+		\hline
+		Test&10&20&50&100\\
+		\hline
+		1&7&16&33&128\\
+		2&7&14&32&71\\
+		3&11&12&42&74\\
+		4&11&13&40&71\\
+		5&7&13&28&71\\
+		\hline
+	\end{tabular}
+	\caption{Time elapsed msec $\times$ 1000}
+\end{table}
+\newpage
+\bibliographystyle{plain}
+\bibliography{template}
+\end{document}
