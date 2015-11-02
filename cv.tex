@@ -1,0 +1,302 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Friggeri Resume/CV
+% XeLaTeX Template
+% Version 1.0 (5/5/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Adrien Friggeri (adrien@friggeri.net)
+% https://github.com/afriggeri/CV
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important notes:
+% This template needs to be compiled with XeLaTeX and the bibliography, if used,
+% needs to be compiled with biber rather than bibtex.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{friggeri-cv} % Add 'print' as an option into the square bracket to remove colors from this template for printing
+
+\addbibresource{bibliography.bib} % Specify the bibliography file to include publications
+
+\begin{document}
+
+\header{Yunheng}{ Yao}{Database Administrator} 
+
+%----------------------------------------------------------------------------------------
+%	SIDEBAR SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{aside} % In the aside, each new line forces a line break
+\section{contact}
+419 Indian Rd
+Windsor On, Canada
+N9C 2M3
+~
++1 (204) 509 9468
+~
+\href{mailto:rugal.bernstein.0@gmail.com}{rugal.bernstein.0@gmail.com}
+\href{http://rugal.ga}{http://rugal.ga}
+\section{languages}
+Mandarin native speaker
+English fluent
+Italian learner
+\section{programming}
+{\color{red} $\varheartsuit$}{\color{red} $\varheartsuit$} Java, C, Bash
+{\color{red} $\varheartsuit$}Matlab
+$\heartsuit$ Clojure, C++
+\section{system}
+{\color{red} $\varheartsuit$}{\color{red} $\varheartsuit$} Linux, Oracle
+{\color{red} $\varheartsuit$}Postgresql, Mysql
+\section{community}
+Postgresql
+\section{tools}
+Git, Maven, Netbeans
+\end{aside}
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+\section{Education}
+
+\begin{entrylist}
+%------------------------------------------------
+\entry
+{2015 Sep--- \\ now}
+{Master {\normalfont of applied computing}}
+{University of Windsor---Canada}
+{ CEPE program.
+}
+%------------------------------------------------
+\entry
+{2014 Sep--- \\ 2015 Apr}
+{Research assistant}
+{University of Manitoba---Canada}
+{	Overall GPA 3.5/4.5
+}
+%------------------------------------------------
+\entry
+{2009 Sep--- \\ 2013 Jun}
+{Bachelor {\normalfont of Software Engineering}}
+{Zhejiang University of Technology---China}
+{\textbf{Thesis: Hadoop join algorithm optimization and performance comparison} \\ This thesis explored several join algorithms used in hadoop. I implement those algorithms and optimized some of them to achieve better performance. By comparing with standard algorithms provided in hadoop jar lib, best workload for different algorithms were illustrated.\\
+	Major GPA: 4.04/5\\ 	
+	Overall GPA: 3.77/5\\
+	Overall Rank 10/235
+}
+%------------------------------------------------
+\end{entrylist}
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+\section{Work experience}
+\begin{entrylist}
+%------------------------------------------------
+\entry
+{2013 Dec--\\ 2014 Jul}
+{State Street Global Advisor Interactive}
+{HangZhou, P.R.China}
+{\emph{Application Developer} \\
+Maintain and enhance internal used systems. Good at collaborate development.\\
+Detailed achievements:
+\begin{itemize}
+\item Client Reporting System: Design and implement JavaEE based web service for front-end invocation.
+\item Fund Subscription System: Refactor and migrate all stored procedures functionality from Sybase to Oracle.
+\item Use \textbf{Camel} to enhance internal interfaces compatibility.
+\item Toastmaster member in State Street.
+\item Held a small \textbf{GRE} class for 8 co-works to enhance their ability for GRE vocabulary and logic.
+\item Presented an introduction about \textbf{Camel} to co-works(about 30 persons) in my office.
+\end{itemize}
+Technique stack involved:
+\begin{itemize}
+	\item Windows, Solaris
+	\item JDK1.6, EJB 3.
+	\item ClearCase, ClearQuest
+	\item Oracle, Sybase.
+	\item Restful, Unit Test.
+	\item Ant, Maven3
+
+\end{itemize}
+}
+\end{entrylist}
+%----------------------------------------------------------------------------------------
+%	AWARDS SECTION
+%----------------------------------------------------------------------------------------
+\newpage
+\section{Research Experience}
+\begin{entrylist}
+%------------------------------------------------
+\entry
+{2014 Sep--\\ 2015 Apr}
+{Research assistant at Data Mining lab}
+{University of Manitoba}
+{Supervisor: Dr. Carson Kai-Sang Leung \\
+	Exploring and leveraging dynamic data mining algorithms to perform neuron level information processing.
+}
+%------------------------------------------------
+
+\entry
+{2012 Mar--\\ 2013 Jun}
+{Research assistant at Computer Application lab}
+{Zhejiang University of Technology}
+{Supervisor: Dr. Lianghuai Yang \\
+Comparing performance of several hash join algorithms in PostgreSQL database with source code.
+}
+
+\end{entrylist}
+%----------------------------------------------------------------------------------------
+%	Skills SECTION
+%----------------------------------------------------------------------------------------
+\section{Skill}
+\begin{entrylist}
+	%------------------------------------------------
+	\entry
+	{2010 - \\ Now}
+	{Java}
+	{Expert}
+	{
+		More than 5 years of Java development experience.\\
+		Experted in JavaSE, JavaEE.\\
+		Keen on Maven. Released 1 artifacts and 2 archetypes. groupId: \textbf{ml.rugal}.\\
+		Like to play with Springmvc, Spring frameworks, Hibernate, Mybatis etc.,\\
+		IDE with Netbeans.
+	}
+	%------------------------------------------------
+	\entry
+	{2011 - \\ Now}
+	{Bash}
+	{Mastery}
+	{
+		Script for automatic Hadoop installation and deployment.\\
+		Script for fraud login attack.
+	}
+	%------------------------------------------------
+	\entry
+	{2013 - \\ Now}
+	{Clojure}
+	{Learner}
+	{
+		Clojar archetype to integrate compojure, ring, korma, and liberator.\\
+		https://github.com/Rugal/clojure-lein-template
+	}
+	%------------------------------------------------
+	\entry
+	{2010 - \\ Now}
+	{Oracle}
+	{Mastery}
+	{
+		Oracle certified professional 10G holder.\\
+		Oracle database administrator
+	}
+	%------------------------------------------------
+	\entry
+	{2013 - \\ Now}
+	{Postgresql}
+	{Expert}
+	{
+		Global developer member.\\
+		Committed one attachment.
+	}
+	%------------------------------------------------
+	\entry
+	{2011 - \\ Now}
+	{MySQL}
+	{Expert}
+	{
+		2 years of Mysql DBA experience in university forum.
+	}
+	%------------------------------------------------
+\end{entrylist}
+\newpage
+\section{Extracurricular Activities}
+\begin{entrylist}
+%------------------------------------------------
+\entry
+{2015 Jul--\\ Now}
+{Java private tracker\ \ (Rugal/JavaPT)}
+{Github}
+{Project owner \& Designer \& Developer\\
+	\begin{itemize}
+		\item Implement BitTorrent specification in Java.
+		\item Multi-thread interaction.
+		\item Byte level data line operations.
+	\end{itemize}
+}
+%------------------------------------------------
+\entry
+{2015 Apr--\\ Now}
+{Project Jarvis\ \ (Rugal/oral-programming)}
+{Github}
+{Project owner \& Designer \& Developer\\
+	\begin{itemize}
+		\item Do speech recognition through Google speech API.
+		\item Multi-thread speech listening and sending.
+	\end{itemize}
+}
+%------------------------------------------------
+\entry
+{2011 Oct--\\ 2013 Jun}
+{JingHong Network association   www.zjut.com}
+{Zhejiang university of Technology}
+{Chief Database Administrator \& Vice Minister of Servers Department\\
+\begin{itemize}
+	\item Built up 2 nodes MySQL database cluster for university forum application.
+	\item Database recovery and migration.
+	\item Designed and Built up mail system(http://mail.zjut.com) for all bachelor students in ZJUT.
+	\item Designed database table of User Center for student account in ZJUT (http://user.zjut.com).
+	\item MySQL database low performance SQL optimization.
+	\item Developed an Automatically PHP Application deployment Bash scripts. 
+\end{itemize}
+}
+%------------------------------------------------
+\entry
+{2010 Sep--\\ 2013 Jun}
+{Humanity \& Social Science Office Patent Platform}
+{Zhejiang university of Technology}
+{Windows Server Administrator\\
+	\begin{itemize}
+		\item Deploy and secure IIS service.
+		\item Deploy Humanity \& Social Science Patent Platform.
+		\item Data backup and recovery for MySQL database.
+	\end{itemize}
+}
+\end{entrylist}
+\section{Awards}
+
+\begin{entrylist}
+	%------------------------------------------------
+	\entry
+	{2014 Sep}
+	{International Graduate Student Entrance Scholarship}
+	{University of Manitoba}
+	{Awarded to students who achieve good GPA in their last 60 credits in Bachelors degree.}
+	%------------------------------------------------
+	\entry
+	{2014 Oct}
+	{$1^{st}$ prize in Postal Savings E-Commerce Competition}
+	{Internet Association of China}
+	{My project named \textbf{What shall we eat?} awarded with $1^{st}$ prize as its novel idea and convenient Web Service. By randomly or flavor based menu recommendation for students, provide them an interesting and interactive service when tired of thinking what to eat. Now this project is serving students in Zhejiang university of Technology.}
+	%------------------------------------------------
+	\entry
+	{2012 Nov}
+	{$3^{rd}$ prize scholarship of outstanding GPA student}
+	{Zhejiang university of Technology}
+	{Awarded to students who achieve good GPA in last academic year.}
+	%------------------------------------------------
+	\entry
+	{2011 Nov}
+	{$2^{nd}$ prize scholarship of outstanding GPA student}
+	{Zhejiang university of Technology}
+	{Awarded to students who achieve good GPA in last academic year.}
+	%------------------------------------------------
+	\entry
+	{2010 Nov}
+	{$2^{nd}$ prize scholarship of outstanding GPA student}
+	{Zhejiang university of Technology}
+	{Awarded to students who achieve good GPA in last academic year.}
+	%------------------------------------------------
+\end{entrylist}
+\end{document}
