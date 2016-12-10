@@ -1,302 +1,162 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Friggeri Resume/CV
-% XeLaTeX Template
-% Version 1.0 (5/5/13)
-%
-% This template has been downloaded from:
-% http://www.LaTeXTemplates.com
-%
-% Original author:
-% Adrien Friggeri (adrien@friggeri.net)
-% https://github.com/afriggeri/CV
-%
-% License:
-% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
-%
-% Important notes:
-% This template needs to be compiled with XeLaTeX and the bibliography, if used,
-% needs to be compiled with biber rather than bibtex.
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Start a document with the here given default font size and paper size.
+\documentclass[9pt,a4paper]{article}
 
-\documentclass[]{friggeri-cv} % Add 'print' as an option into the square bracket to remove colors from this template for printing
+% Set the page margins.
+\usepackage[a4paper,margin=0.3in]{geometry}
 
-\addbibresource{bibliography.bib} % Specify the bibliography file to include publications
+% Setup the language.
+\usepackage[english]{babel}
+\hyphenation{Some-long-word}
+% Makes resume-specific commands available.
+\usepackage{resume}
+\begin{document}  % begin the content of the document
+\sloppy  % this to relax whitespacing in favour of straight margins
 
-\begin{document}
+% title on top of the document
 
-\header{Yunheng}{ Yao}{Database Administrator} 
+\maintitle{Yunheng Yao}{}{}
+%\centerline{Yunheng}
 
-%----------------------------------------------------------------------------------------
-%	SIDEBAR SECTION
-%----------------------------------------------------------------------------------------
+\spacedhrule{0.1em}{-0.2em}
+% \noindent prevents paragraph's first lines from indenting
+% \mbox is used to obfuscate the email address
+% \sbull is a spaced bullet
+% \href well..
+% \\ breaks the line into a new paragraph
 
-\begin{aside} % In the aside, each new line forces a line break
-\section{contact}
-419 Indian Rd
-Windsor On, Canada
-N9C 2M3
-~
-+1 (204) 509 9468
-~
-\href{mailto:rugal.bernstein.0@gmail.com}{rugal.bernstein.0@gmail.com}
-\href{http://rugal.ga}{http://rugal.ga}
-\section{languages}
-Mandarin native speaker
-English fluent
-Italian learner
-\section{programming}
-{\color{red} $\varheartsuit$}{\color{red} $\varheartsuit$} Java, C, Bash
-{\color{red} $\varheartsuit$}Matlab
-$\heartsuit$ Clojure, C++
-\section{system}
-{\color{red} $\varheartsuit$}{\color{red} $\varheartsuit$} Linux, Oracle
-{\color{red} $\varheartsuit$}Postgresql, Mysql
-\section{community}
-Postgresql
-\section{tools}
-Git, Maven, Netbeans
-\end{aside}
-%----------------------------------------------------------------------------------------
-%	EDUCATION SECTION
-%----------------------------------------------------------------------------------------
-\section{Education}
+\begin{table}[h]
+    \centering
+\begin{tabular}{r l| r l}
+    \textsc{Address:}\,   & 5 Harris Ave, Toronto, Ontario\, &    \textsc{Github:}\,  & \href{https://github.com/Rugal}{Rugal}\\
+    \textsc{Phone:}\,    & +1 (519) 971-1302  &  StackOverflow:\,  & \href{http://stackoverflow.com/users/1242236/rugal}{/users/1242236/rugal}\\
+    \textsc{Email:}\,   & \href{mailto:rugal.bernstein.0@gmail.com}{rugal.bernstein.0@gmail.com}&LinkedIn:\, & \href{https://ca.linkedin.com/in/yunheng-yao-b5a84a55}{yunheng-yao-b5a84a55}\\
+    \textsc{Website:}\,  & \href{http://rugal.ga}{http://rugal.ga}&&\\
+\end{tabular}
+\end{table}
+%\nobreakvspace{0.3em}  % add some page break averse vertical spacing
+\spacedhrule{-0.9em}{-0.9em}
+\roottitle{Profile of skills}
+\inlineheadsection  % special section that has an inline header with a 'hanging' paragraph
+{Expert level:}{Java, C, Bash, Markdown; Linux, Oracle, Postgresql, Git}
+\inlineheadsection 
+{Intermediate level:}{Clojure, Matlab, \LaTeX; Mysql, Hadoop; Machine Learning, TCP/IP; Piano}
+\inlineheadsection 
+{Basic level:}{C++, R, Python, Javascript; Spark; Data Mining}
+\inlineheadsection
+{Natural languages:}{Fluent in both English and Chinese}
 
-\begin{entrylist}
-%------------------------------------------------
-\entry
-{2015 Sep--- \\ now}
-{Master {\normalfont of applied computing}}
-{University of Windsor---Canada}
-{ CEPE program.
-}
-%------------------------------------------------
-\entry
-{2014 Sep--- \\ 2015 Apr}
-{Research assistant}
-{University of Manitoba---Canada}
-{	Overall GPA 3.5/4.5
-}
-%------------------------------------------------
-\entry
-{2009 Sep--- \\ 2013 Jun}
-{Bachelor {\normalfont of Software Engineering}}
-{Zhejiang University of Technology---China}
-{\textbf{Thesis: Hadoop join algorithm optimization and performance comparison} \\ This thesis explored several join algorithms used in hadoop. I implement those algorithms and optimized some of them to achieve better performance. By comparing with standard algorithms provided in hadoop jar lib, best workload for different algorithms were illustrated.\\
-	Major GPA: 4.04/5\\ 	
-	Overall GPA: 3.77/5\\
-	Overall Rank 10/235
-}
-%------------------------------------------------
-\end{entrylist}
-%----------------------------------------------------------------------------------------
-%	WORK EXPERIENCE SECTION
-%----------------------------------------------------------------------------------------
-\section{Work experience}
-\begin{entrylist}
-%------------------------------------------------
-\entry
-{2013 Dec--\\ 2014 Jul}
-{State Street Global Advisor Interactive}
-{HangZhou, P.R.China}
-{\emph{Application Developer} \\
-Maintain and enhance internal used systems. Good at collaborate development.\\
-Detailed achievements:
-\begin{itemize}
-\item Client Reporting System: Design and implement JavaEE based web service for front-end invocation.
-\item Fund Subscription System: Refactor and migrate all stored procedures functionality from Sybase to Oracle.
-\item Use \textbf{Camel} to enhance internal interfaces compatibility.
-\item Toastmaster member in State Street.
-\item Held a small \textbf{GRE} class for 8 co-works to enhance their ability for GRE vocabulary and logic.
-\item Presented an introduction about \textbf{Camel} to co-works(about 30 persons) in my office.
-\end{itemize}
-Technique stack involved:
-\begin{itemize}
-	\item Windows, Solaris
-	\item JDK1.6, EJB 3.
-	\item ClearCase, ClearQuest
-	\item Oracle, Sybase.
-	\item Restful, Unit Test.
-	\item Ant, Maven3
+\spacedhrule{0.9em}{-0.8em}  % a horizontal line with some vertical spacing before and after
 
-\end{itemize}
-}
-\end{entrylist}
-%----------------------------------------------------------------------------------------
-%	AWARDS SECTION
-%----------------------------------------------------------------------------------------
-\newpage
-\section{Research Experience}
-\begin{entrylist}
-%------------------------------------------------
-\entry
-{2014 Sep--\\ 2015 Apr}
-{Research assistant at Data Mining lab}
-{University of Manitoba}
-{Supervisor: Dr. Carson Kai-Sang Leung \\
-	Exploring and leveraging dynamic data mining algorithms to perform neuron level information processing.
-}
-%------------------------------------------------
+\roottitle{Education}
+\headedsection
+{\textbf{Master degree in Applied Computing}} {Sep 2015 -- Dec 2016}
+{   
+    \headedsubsection
+     {\href{http://www.uwindsor.ca/}{University of Windsor, {\textsc{Windsor, Ontario, Canada}} }}   {}
+    {\bodytext{
+            \begin{itemize}
+                \item Focused on the speech driven coding application
+                \item Learned to develop software with continuous integration and continuous delivery techniques
+                \item \textsc{Major GPA}: 92/100, Overall GPA: 88/100, Rank: 2/67
+            \end{itemize}}}}
+\headedsection
+{\textbf{Bachelor degree in Software Engineering}} {Sep 2009 -- Jun 2013}
+{
+    \headedsubsection
+     {\href{http://www.zjut.edu.cn/}{Zhejiang University of Technology, \textsc{Hangzhou, Zhejiang, P.R.China}}}{}
+    {\bodytext{  
+            \begin{itemize}
+                \item Thesis: ``Hadoop Join algorithms performance comparison''
+                \item Major GPA: 4.04/5, Overall GPA: 3.77/5, Rank: 10/235 
+            \end{itemize}}}}
 
-\entry
-{2012 Mar--\\ 2013 Jun}
-{Research assistant at Computer Application lab}
-{Zhejiang University of Technology}
-{Supervisor: Dr. Lianghuai Yang \\
-Comparing performance of several hash join algorithms in PostgreSQL database with source code.
-}
+\spacedhrule{0em}{-0.9em}
+\roottitle{Work Experience}
+\headedsection  
+{\textbf{Internship --- Software Development Engineer}}{Jul 2016 -- Dec 2016}
+{
+	\headedsubsection
+	{\href{https://www.amazon.ca/}{Amazon Inc., \textsc{Toronto, Canada}}}{} 
+	{\bodytext{
+			\begin{itemize}
+				\item Designed and developed a streaming data processing system by myself
+				\item Many internal services were integrated in this project to tackle different problems
+				\item Able to solve data quality issue under big data situation that is more than 20 GB
+				\item Techniques involved: DynamoDB, S3, SNS, SQS, AAA
+			\end{itemize}}}}
+\headedsection  
+{\textbf{Internship --- App developer}}{Dec 2013 -- Jul 2014}
+{
+    \headedsubsection
+    {\href{http://www.statestreet.com}{State Street Global Interactive, \textsc{Hangzhou, Zhejiang, P.R.China}}}{} 
+    {\bodytext{
+            \begin{itemize}
+                \item Maintained and enhanced internal systems, good at collaborative development
+                \item Designed and implemented JavaEE based web service for client  reporting system
+                \item Refactored and migrated store procedures from Sybase to Oracle for fund subscription system
+                \item Presented an introduction about \textbf{Camel} to co-work(about 30 people) in office
+            \end{itemize}}}}
 
-\end{entrylist}
-%----------------------------------------------------------------------------------------
-%	Skills SECTION
-%----------------------------------------------------------------------------------------
-\section{Skill}
-\begin{entrylist}
-	%------------------------------------------------
-	\entry
-	{2010 - \\ Now}
-	{Java}
-	{Expert}
-	{
-		More than 5 years of Java development experience.\\
-		Experted in JavaSE, JavaEE.\\
-		Keen on Maven. Released 1 artifacts and 2 archetypes. groupId: \textbf{ml.rugal}.\\
-		Like to play with Springmvc, Spring frameworks, Hibernate, Mybatis etc.,\\
-		IDE with Netbeans.
-	}
-	%------------------------------------------------
-	\entry
-	{2011 - \\ Now}
-	{Bash}
-	{Mastery}
-	{
-		Script for automatic Hadoop installation and deployment.\\
-		Script for fraud login attack.
-	}
-	%------------------------------------------------
-	\entry
-	{2013 - \\ Now}
-	{Clojure}
-	{Learner}
-	{
-		Clojar archetype to integrate compojure, ring, korma, and liberator.\\
-		https://github.com/Rugal/clojure-lein-template
-	}
-	%------------------------------------------------
-	\entry
-	{2010 - \\ Now}
-	{Oracle}
-	{Mastery}
-	{
-		Oracle certified professional 10G holder.\\
-		Oracle database administrator
-	}
-	%------------------------------------------------
-	\entry
-	{2013 - \\ Now}
-	{Postgresql}
-	{Expert}
-	{
-		Global developer member.\\
-		Committed one attachment.
-	}
-	%------------------------------------------------
-	\entry
-	{2011 - \\ Now}
-	{MySQL}
-	{Expert}
-	{
-		2 years of Mysql DBA experience in university forum.
-	}
-	%------------------------------------------------
-\end{entrylist}
-\newpage
-\section{Extracurricular Activities}
-\begin{entrylist}
-%------------------------------------------------
-\entry
-{2015 Jul--\\ Now}
-{Java private tracker\ \ (Rugal/JavaPT)}
-{Github}
-{Project owner \& Designer \& Developer\\
-	\begin{itemize}
-		\item Implement BitTorrent specification in Java.
-		\item Multi-thread interaction.
-		\item Byte level data line operations.
-	\end{itemize}
-}
-%------------------------------------------------
-\entry
-{2015 Apr--\\ Now}
-{Project Jarvis\ \ (Rugal/oral-programming)}
-{Github}
-{Project owner \& Designer \& Developer\\
-	\begin{itemize}
-		\item Do speech recognition through Google speech API.
-		\item Multi-thread speech listening and sending.
-	\end{itemize}
-}
-%------------------------------------------------
-\entry
-{2011 Oct--\\ 2013 Jun}
-{JingHong Network association   www.zjut.com}
-{Zhejiang university of Technology}
-{Chief Database Administrator \& Vice Minister of Servers Department\\
-\begin{itemize}
-	\item Built up 2 nodes MySQL database cluster for university forum application.
-	\item Database recovery and migration.
-	\item Designed and Built up mail system(http://mail.zjut.com) for all bachelor students in ZJUT.
-	\item Designed database table of User Center for student account in ZJUT (http://user.zjut.com).
-	\item MySQL database low performance SQL optimization.
-	\item Developed an Automatically PHP Application deployment Bash scripts. 
-\end{itemize}
-}
-%------------------------------------------------
-\entry
-{2010 Sep--\\ 2013 Jun}
-{Humanity \& Social Science Office Patent Platform}
-{Zhejiang university of Technology}
-{Windows Server Administrator\\
-	\begin{itemize}
-		\item Deploy and secure IIS service.
-		\item Deploy Humanity \& Social Science Patent Platform.
-		\item Data backup and recovery for MySQL database.
-	\end{itemize}
-}
-\end{entrylist}
-\section{Awards}
 
-\begin{entrylist}
-	%------------------------------------------------
-	\entry
-	{2014 Sep}
-	{International Graduate Student Entrance Scholarship}
-	{University of Manitoba}
-	{Awarded to students who achieve good GPA in their last 60 credits in Bachelors degree.}
-	%------------------------------------------------
-	\entry
-	{2014 Oct}
-	{$1^{st}$ prize in Postal Savings E-Commerce Competition}
-	{Internet Association of China}
-	{My project named \textbf{What shall we eat?} awarded with $1^{st}$ prize as its novel idea and convenient Web Service. By randomly or flavor based menu recommendation for students, provide them an interesting and interactive service when tired of thinking what to eat. Now this project is serving students in Zhejiang university of Technology.}
-	%------------------------------------------------
-	\entry
-	{2012 Nov}
-	{$3^{rd}$ prize scholarship of outstanding GPA student}
-	{Zhejiang university of Technology}
-	{Awarded to students who achieve good GPA in last academic year.}
-	%------------------------------------------------
-	\entry
-	{2011 Nov}
-	{$2^{nd}$ prize scholarship of outstanding GPA student}
-	{Zhejiang university of Technology}
-	{Awarded to students who achieve good GPA in last academic year.}
-	%------------------------------------------------
-	\entry
-	{2010 Nov}
-	{$2^{nd}$ prize scholarship of outstanding GPA student}
-	{Zhejiang university of Technology}
-	{Awarded to students who achieve good GPA in last academic year.}
-	%------------------------------------------------
-\end{entrylist}
+\spacedhrule{-0.2em}{-0.9em}
+\roottitle{Project \& Experience}
+\headedsection
+{Speech programming tool kit}{Apr 2015 -- Present} 
+{
+    {\bodytext{
+           \begin{itemize}
+               \item Programming could be simplified to just speak to microphone.
+               \item By analyzing the transcript with NLP, this tool kit could help programmer to do coding work
+           \end{itemize}}}}
+\headedsection  % sets the header for a subsection and contains usually body text
+{Distance based clustering \& visualization} {Mar 2015 -- Apr 2015}
+{%
+    \headedsubsection
+    {Research project} {}
+    {\bodytext{
+            \begin{itemize}
+                \item Designed Distance(radius) based clustering algorithm
+                \item Implemented this algorithm in Java with GUI
+            \end{itemize}}}}
+\headedsection
+{Designed a Keyboard layout for Chinese}{Oct 2014 -- Feb 2015}
+{%
+    \headedsubsection
+    {Research project} {}
+    {\bodytext{
+            \begin{itemize}
+                \item Analyzed character frequency based on movie reports that includes more than 100K Chinese words
+                \item Data mining used to discover relevant characters that are likely type together in short time
+                \item Designed a better Chinese keyboard layout based on character frequency and combination
+            \end{itemize}}}
+            }
+\headedsection
+{Hadoop join algorithm performance comparison} {Oct 2012 -- Jun 2013} 
+{
+    \headedsubsection
+    {Bachelor degree graduation project}{}
+    {\bodytext{
+            \begin{itemize}
+                \item Deployed 5 Hadoop nodes
+                \item Involved 10GB data to test join operation
+                \item Implemented and compared 3 different hadoop join algorithms 
+            \end{itemize}}}}
+\vspace{-0.2em}
+\begin{center}
+    \emph{\small Please refer to my \href{https://ca.linkedin.com/in/yunheng-yao-b5a84a55}{LinkedIn} and \href{https://github.com/Rugal}{Github} for a more complete list of project experiences along with endorsements.}
+\end{center}
+\spacedhrule{-0.2em}{-0.4em}
+\roottitle{Scholarships and Certificates}
+\inlineheadsection  % special section that has an inline header with a 'hanging' paragraph
+{Jan. 2016}{Upgrade Oracle 10G OCP(Oracle Certified Professional) to Oracle 12C OCP.}
+\inlineheadsection
+{Oct. 2014}{First prize in China Postal Savings E-Commerce Competition.} 
+\inlineheadsection
+{Nov. 2012}{Third prize scholarship of outstanding GPA student in ZJUT.} 
+\inlineheadsection
+{Nov. 2011}{Second prize scholarship of outstanding GPA student in ZJUT.} 
+\inlineheadsection
+{Nov. 2011}{Oracle 10G OCP(Oracle Certified Professional).} 
+\inlineheadsection
+{Nov. 2010}{second prize scholarship of outstanding GPA student in ZJUT.} 
 \end{document}
